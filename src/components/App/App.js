@@ -2,6 +2,8 @@ import React, { Component } from 'react';
 import './App.css';
 import Header from '../Header/Header';
 import Footer from '../Footer/Footer';
+import GuestList from '../GuestList/GuestList';
+import DinnerSupplies from '../DinnerSupplies/DinnerSupplies';
 
 class App extends Component {
   state = {
@@ -75,8 +77,9 @@ class App extends Component {
           </div>
           <button type="submit">Add Guest</button>
         </form>
-        <h2>Guest List</h2>
-        <table>
+
+        <GuestList guestList={this.state.guestList} />
+        {/* <table>
           <thead>
             <tr>
               <th>Name</th>
@@ -91,7 +94,7 @@ class App extends Component {
               </tr>
             ))}
           </tbody>
-        </table>
+        </table> */}
         <h2>Dinner Supplies</h2>
         <div>Spoons: {this.state.guestList.length * 2}</div>
         <div>Forks: {this.state.guestList.length * 2}</div>
